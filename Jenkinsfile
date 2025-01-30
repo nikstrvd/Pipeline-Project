@@ -7,6 +7,13 @@ pipeline{
         }
     }
 
+    stages("Build"){
+        steps {
+
+            sh 'echo "Build Project"'
+        }
+    }
+
     stages("Run"){
         steps {
 
