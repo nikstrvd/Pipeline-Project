@@ -1,23 +1,20 @@
 pipeline{
     agent any
     stages("Compile"){
-        steps {
+        stage {
 
-            sh 'echo "Compiled Program"'
+            steps {
+
+                sh 'javac Test.java'
+            }
+           
         }
     }
 
-    stages("Build"){
+    stage("Run"){
         steps {
 
-            sh 'echo "Build Project"'
-        }
-    }
-
-    stages("Run"){
-        steps {
-
-            sh 'echo "Run Program"'
+            sh 'java Test"'
         }
     }
 }
